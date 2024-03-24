@@ -1,0 +1,32 @@
+@for (link of links; track link) { @if(isMobile) {
+<a
+  href="{{ link.url }}"
+  [ngClass]="{
+    'bg-secondary-600 text-white': activeLink === link.url,
+    'hover:bg-secondary-400 hover:bg-opacity-75': activeLink !== link.url
+  }"
+  class="block rounded-md py-2 px-3 font-medium text-primary-500"
+  aria-current="page"
+  >{{ link.name }} {{ link.url }}
+</a>
+
+} @else {
+<a
+  href="{{ link.url }}"
+  [ngClass]="{
+    'bg-secondary-600 text-white': activeLink === link.url,
+    'text-primary-500 hover:bg-secondary-400 hover:bg-opacity-75':
+      activeLink !== link.url
+  }"
+  class="rounded-md py-2 px-3 text-sm font-medium text-primary-500"
+  aria-current="page"
+  >{{ link.name }}</a
+>
+} } @empty {
+<a
+  href="#"
+  class="border-indigo-500 text-gray-900 inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
+  aria-current="page"
+  >Dashboard
+</a>
+}

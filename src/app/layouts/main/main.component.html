@@ -1,0 +1,16 @@
+<div class="h-full flex flex-col min-h-screen">
+  <div class="flex-grow">
+    <div class="bg-secondary-400 pb-32">
+      <app-navbar></app-navbar>
+      <app-breadcrumbs></app-breadcrumbs>
+    </div>
+    <main class="-mt-32 h-fit">
+      <div class="mx-auto max-w-7xl sm:px-6 h-full">
+        <div class="rounded-t-lg bg-white px-5 py-6 shadow sm:px-6 h-full">
+          <router-outlet> </router-outlet>
+        </div>
+      </div>
+    </main>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,74 @@
+<nav
+  class="border-b border-secondary-200 border-opacity-25 bg-secondary-400 lg:border-none"
+>
+  <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+    <div
+      class="relative flex h-16 items-center justify-between lg:border-b lg:border-secondary-300 lg:border-opacity-25"
+    >
+      <div class="flex items-center px-2 lg:px-0">
+        <div class="flex-shrink-0">
+          <img
+            class="block h-14 w-50"
+            src="/images/logo.webp"
+            alt="Your Company"
+          />
+        </div>
+        <div class="hidden lg:ml-10 lg:block">
+          <div class="flex space-x-4">
+            <app-nav-menu [isMobile]="false"></app-nav-menu>
+          </div>
+        </div>
+      </div>
+      <div class="flex lg:hidden">
+        <!-- Mobile menu button -->
+        <button
+          (click)="toggleMobileMenu()"
+          type="button"
+          class="relative inline-flex items-center justify-center rounded-md bg-secondary-500 p-2 text-secondary-100 shover:bg-secondary-400 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-secondary-500"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!-- Menu open: "hidden", Menu closed: "block" -->
+          <svg
+            [class.hidden]="isMobileMenuOpen"
+            class="block h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <!-- Menu open: "block", Menu closed: "hidden" -->
+          <svg
+            [class.hidden]="!isMobileMenuOpen"
+            class="hidden h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div *ngIf="isMobileMenuOpen" class="lg:hidden" id="mobile-menu">
+    <app-nav-menu [isMobile]="true"></app-nav-menu>
+  </div>
+</nav>
