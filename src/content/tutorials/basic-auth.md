@@ -9,7 +9,7 @@ authorRole: "Teaching Fellow - Technocamps"
 description: "Let's register a user"
 ---
 
-# Creating the Database
+# Creating the user
 
 1.  in our `queries` folder in our `users.js` file let's create the method to create a user 
 2.  but first we need to install two more packages:
@@ -57,7 +57,7 @@ description: "Let's register a user"
     };
     ```   
 
-# Creating the login view and the form
+# Creating the register view and the form
 
 1. in my views folder we're going to create a `register.mustache` file and in it place our form:
    ```html
