@@ -125,6 +125,7 @@ description: "The actual stuff we will see"
 
 
 [PREV: Getting Started](./tutorials/getting-started)
-[NEXT: Connecting to the DB](./turorials/connecting-to-the-db)
+
+[NEXT: Connecting to the DB](./tutorials/connecting-to-the-db)
 
 

@@ -77,5 +77,6 @@ description: "Let's start building our database"
 
 
 [PREV: Getting Started](./tutorials/setting-up-the-views)
+
 [NEXT: Basic Auth](./tutorials/basic-auth)
 
