@@ -16,8 +16,7 @@ export interface PostAttributes {
     <ng-container *ngIf="post$ | async as post">
     <div
       class="prose dark:prose-invert
-      prose-h1:font-bold prose-h1:text-xl
-      prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl max-w-full">
+      prose-h1:font-bold prose-h1:text-xl prose-p:text-justify prose-img:rounded-xl max-w-full">
       <analog-markdown [content]="post.content" class=""></analog-markdown>
     </div>   
     </ng-container>
