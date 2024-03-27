@@ -1,6 +1,6 @@
 ---
 title: "Setting up the views"
-date: "2024-03-3"
+date: "2024-03-4"
 category: "Guides"
 mainImage: "/images/tutorials.webp"
 authorImage: "https://res.cloudinary.com/wehi-web-design-ltd/image/upload/v1698242293/carlosarli.com/photo/image0.jpg"
@@ -125,5 +125,6 @@ description: "The actual stuff we will see"
 
 
 [PREV: Getting Started](./tutorials/getting-started)
+[NEXT: Connecting to the DB](./turorials/connecting-to-the-db)
 
 
