@@ -76,7 +76,7 @@ description: "Let's start building our database"
   this code will take in our credentials from the `.env` file and create the connection to the database and will print to the console if we are connected to the db when initialised
 
 
-[PREV: Getting Started](./tutorials/setting-up-the-views)
+[PREV: Setting Up the Views](./tutorials/setting-up-the-views)
 
 [NEXT: Basic Auth](./tutorials/basic-auth)
 

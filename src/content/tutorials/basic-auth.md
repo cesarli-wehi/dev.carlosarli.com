@@ -95,6 +95,6 @@ description: "Let's register a user"
 
 
 
-[PREV: Getting Started](./tutorials/connecting-to-the-db)
+[PREV: Connecting to the DB](./tutorials/connecting-to-the-db)
 
 
