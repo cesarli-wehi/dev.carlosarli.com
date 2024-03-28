@@ -125,8 +125,8 @@ order: 4
 
 
 
-[PREV: Getting Started](./tutorials/getting-started)
+[PREV: Getting Started](./tutorials/express/getting-started)
 
-[NEXT: Connecting to the DB](./tutorials/connecting-to-the-db)
+[NEXT: Connecting to the DB](./tutorials/express/connecting-to-the-db)
 
 

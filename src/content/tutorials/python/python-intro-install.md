@@ -63,6 +63,6 @@ F10 to go line by line
 There are also step into and step out functions which will be useful once we get into methods and loops.
 
 
-[NEXT: Syntax](./tutorials/series/python/python-intro-syntax)
+[NEXT: Syntax](./tutorials/python/python-intro-syntax)
 
 

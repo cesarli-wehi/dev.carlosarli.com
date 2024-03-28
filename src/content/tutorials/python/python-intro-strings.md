@@ -87,6 +87,6 @@ print("abc".isdigit())
 ```
 
 
-[PREV: Maths](./tutorials/series/python/python-intro-maths)
+[PREV: Maths](./tutorials/python/python-intro-maths)
 
-[NEXT: Collections](./tutorials/series/python/python-intro-collections)
+[NEXT: Collections](./tutorials/python/python-intro-collections)

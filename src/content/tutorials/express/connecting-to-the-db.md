@@ -77,7 +77,7 @@ order: 5
   this code will take in our credentials from the `.env` file and create the connection to the database and will print to the console if we are connected to the db when initialised
 
 
-[PREV: Setting Up the Views](./tutorials/setting-up-the-views)
+[PREV: Setting Up the Views](./tutorials/express/setting-up-the-views)
 
-[NEXT: Basic Auth](./tutorials/basic-auth)
+[NEXT: Basic Auth](./tutorials/express/basic-auth)
 

@@ -6,31 +6,57 @@ import { IBreadcrumb } from '../models/iBreadcrumb';
   providedIn: 'root'
 })
 export class BreadcrumbsService {
-  constructor() {}
+  constructor() { }
 
   buildBreadCrumb(route: ActivatedRoute, url: string = '', breadcrumbs: IBreadcrumb[] = []): IBreadcrumb[] {
+    // Check if the route configuration exists and has a path
     if (route.routeConfig && route.routeConfig.path !== '') {
-      // Avoid adding a breadcrumb for the root path
       const routePath = route.routeConfig.path;
+      let fullPath = '';
       // Handle dynamic routes
-      let path = routePath?.startsWith(':') ? route.snapshot.params[routePath.substring(1)] : routePath;
-      let fullPath = url + `/${path}`;
+      if (routePath?.startsWith(':')) {
+        const params = Object.entries(route.snapshot.params);
+        for (const [key, value] of params) {
+          let fullPath = url + `/${value}`;
+          // Prevent duplicating breadcrumbs
+          if (!breadcrumbs.some(bc => bc.url === fullPath)) {
+            breadcrumbs.push({ label: this.extractLabelFromUrl(fullPath), url: fullPath });
+          }
+          url = fullPath; // Update the URL for the next parameter
+        }
+      } else {
+        fullPath = url + `/${routePath}`;
+        // Prevent duplicating breadcrumbs
+        if (!breadcrumbs.some(bc => bc.url === fullPath)) {
+          breadcrumbs.push({ label: this.extractLabelFromUrl(fullPath), url: fullPath });
+        }
+      }
 
       // Prevent duplicating breadcrumbs
       if (!breadcrumbs.some(bc => bc.url === fullPath)) {
-        const breadcrumbLabel = route.snapshot.data['breadcrumb'] ? route.snapshot.data['breadcrumb'] : this.extractLabelFromUrl(fullPath);
-        breadcrumbs.push({ label: breadcrumbLabel, url: fullPath });
+        // Attempt to get the breadcrumb label from the route data
+        let breadcrumbLabel = route.snapshot.data['breadcrumb'];
+        // If not defined, extract the label from the URL
+        if (!breadcrumbLabel) {
+          breadcrumbLabel = this.extractLabelFromUrl(fullPath);
+          console.log(`Breadcrumb label generated from URL: ${breadcrumbLabel}`);
+        }
+        // Only add the breadcrumb if the label is not 'Home'
+        if (breadcrumbLabel !== 'Home') {
+          breadcrumbs.push({ label: breadcrumbLabel, url: fullPath });
+        }
       }
     }
 
+    // Recursively add breadcrumbs for child routes
     if (route.firstChild) {
-      // Recursively add breadcrumbs for child routes
       return this.buildBreadCrumb(route.firstChild, url + '/' + (route.routeConfig ? route.routeConfig.path : ''), breadcrumbs);
     } else {
       // Cleanup any duplicated slashes
       breadcrumbs = breadcrumbs.map(bc => {
         return { label: bc.label, url: bc.url.replace(/\/\/+/g, '/') };
       });
+      console.log(breadcrumbs)
       return breadcrumbs;
     }
   }
@@ -44,5 +70,5 @@ export class BreadcrumbsService {
     lastPart = lastPart.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '); // Capitalize the first letter of each word
     return lastPart.charAt(0).toUpperCase() + lastPart.slice(1);
   }
-  
+
 }

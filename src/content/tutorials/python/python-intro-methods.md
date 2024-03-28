@@ -76,6 +76,6 @@ recursion(6)
 
 ```
 
-[PREV: Files](./tutorials/series/python/python-intro-files)
+[PREV: Files](./tutorials/python/python-intro-files)
 
-[NEXT: User Input](./tutorials/series/python/python-intro-user-input)
+[NEXT: User Input](./tutorials/python/python-intro-user-input)

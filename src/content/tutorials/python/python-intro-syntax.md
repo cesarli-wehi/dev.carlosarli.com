@@ -162,6 +162,6 @@ print(tmp <= tmp2)
 ```
 
 
-[PREV: Install](./tutorials/series/python/python-intro-install)
+[PREV: Install](./tutorials/python/python-intro-install)
 
-[NEXT: Maths](./tutorials/series/python/python-intro-maths)
+[NEXT: Maths](./tutorials/python/python-intro-maths)

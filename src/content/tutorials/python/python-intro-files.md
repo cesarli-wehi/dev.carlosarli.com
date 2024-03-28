@@ -147,6 +147,6 @@ John,Robinson,johnrobinson@bogusemail.com
 Travis,Arnold,travisarnold@bogusemail.com
 ```
 
-[PREV: Loops](./tutorials/series/python/python-intro-loops)
+[PREV: Loops](./tutorials/python/python-intro-loops)
 
-[NEXT: Methods](./tutorials/series/python/python-intro-methods)
+[NEXT: Methods](./tutorials/python/python-intro-methods)

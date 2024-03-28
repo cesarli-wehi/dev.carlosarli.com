@@ -59,6 +59,6 @@ while True:
 # have fun
 ```
 
-[PREV: Methods](./tutorials/series/python/python-intro-methods)
+[PREV: Methods](./tutorials/python/python-intro-methods)
 
-[NEXT: Intro to NumPy](./tutorials/series/python/intro-to-numpy)
+[NEXT: Intro to NumPy](./tutorials/python/intro-to-numpy)

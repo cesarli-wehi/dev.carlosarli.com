@@ -346,6 +346,6 @@ The issue is that if done unintentionally one might not be aware that while modi
 To avoid this problem simply use the copy() method when you want to copy the values of one collections, or a slice of one, to another. ez pz Mario and Luigi!
 
 
-[PREV: Strings](./tutorials/series/python/python-intro-strings)
+[PREV: Strings](./tutorials/python/python-intro-strings)
 
-[NEXT: Conditionals](./tutorials/series/python/python-intro-conditionals)
+[NEXT: Conditionals](./tutorials/python/python-intro-conditionals)

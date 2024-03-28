@@ -112,6 +112,6 @@ order: 3
    ```
    to run the program
 
-[PREV: IDE Setup](./tutorials/ide-setup)
+[PREV: IDE Setup](./tutorials/express/ide-setup)
 
-[NEXT: Setting up the views](./tutorials/setting-up-the-views)
+[NEXT: Setting up the views](./tutorials/express/setting-up-the-views)

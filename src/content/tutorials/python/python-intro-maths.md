@@ -74,6 +74,6 @@ print(math.inf > 0)
 print(math.inf - math.inf)
 ```
 
-[PREV: Syntax](./tutorials/series/python/python-intro-syntax)
+[PREV: Syntax](./tutorials/python/python-intro-syntax)
 
-[NEXT: Strings](./tutorials/series/python/python-intro-strings)
+[NEXT: Strings](./tutorials/python/python-intro-strings)

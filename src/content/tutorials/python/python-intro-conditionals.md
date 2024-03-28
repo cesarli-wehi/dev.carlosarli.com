@@ -50,6 +50,6 @@ else:
 
 ```
 
-[PREV: Collections](./tutorials/series/python/python-intro-collections)
+[PREV: Collections](./tutorials/python/python-intro-collections)
 
-[NEXT: Loops](./tutorials/series/python/python-intro-loops)
+[NEXT: Loops](./tutorials/python/python-intro-loops)

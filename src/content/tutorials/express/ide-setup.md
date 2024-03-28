@@ -25,6 +25,6 @@ Go into the extensions tab on the left handside and install the following extens
 I recommend changing one setting to open the settings pane you just need to hit ctrl/cmd + , then look for the line wrap setting and activate it
 
 
-[PREV: Install](./tutorials/install)
+[PREV: Install](./tutorials/express/install)
 
-[NEXT: Project Setup](./tutorials/getting-started)
+[NEXT: Project Setup](./tutorials/express/getting-started)

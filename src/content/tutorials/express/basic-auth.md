@@ -96,6 +96,6 @@ order: 6
 
 
 
-[PREV: Connecting to the DB](./tutorials/connecting-to-the-db)
+[PREV: Connecting to the DB](./tutorials/express/connecting-to-the-db)
 
 

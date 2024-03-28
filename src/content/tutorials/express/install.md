@@ -64,4 +64,4 @@ order: 1
 
 
 
-[NEXT: IDE Setup](./tutorials/ide-setup)
+[NEXT: IDE Setup](./tutorials/express/ide-setup)

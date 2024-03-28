@@ -129,6 +129,6 @@ for x in range(0, 3):
 ```
 
 
-[PREV: Conditionals](./tutorials/series/python/python-intro-conditionals)
+[PREV: Conditionals](./tutorials/python/python-intro-conditionals)
 
-[NEXT: Files](./tutorials/series/python/python-intro-files)
+[NEXT: Files](./tutorials/python/python-intro-files)

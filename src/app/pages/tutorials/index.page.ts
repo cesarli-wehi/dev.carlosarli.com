@@ -23,7 +23,7 @@ import { ITutorialCategory } from 'src/app/models/iTutorialCategory';
             </div>
             <div class="group relative max-w-xl">
               <h3 class="mt-3 text-lg font-semibold leading-6 text-secondary-500 group-hover:text-secondary-600">
-                <a [routerLink]="['/tutorials/series/', tutorial.key.toLowerCase()]">
+                <a [routerLink]="['/tutorials', tutorial.key.toLowerCase()]">
                   <span class="absolute inset-0"></span>
                   {{tutorial.value.title}}
                 </a>
@@ -57,13 +57,21 @@ import { ITutorialCategory } from 'src/app/models/iTutorialCategory';
 export default class TutorialCategoryListComponent {
   readonly tutorials = injectContentFiles<ITutorial>((contentFile) =>
     contentFile.filename.includes('tutorials/')
-  ).sort((a, b) => {
-    if (a.attributes.order == null) return 1;
-    if (b.attributes.order == null) return -1;
-    return a.attributes.order - b.attributes.order;
-  }).reduce((categories, tutorial) => {
+  ).reduce((categories, tutorial) => {
     const category = tutorial.attributes.category;
     if (!categories[category]) {
+      categories[category] = {
+        title: '',
+        categoryImage: '',
+        authorImage: '',
+        authorName: '',
+        authorRole: '',
+        slug: '',
+        description: '',
+        numberOfTutorials: 0
+      };
+    }
+    if (tutorial.filename.includes('index')) {
       categories[category] = {
         title: tutorial.attributes.title,
         categoryImage: tutorial.attributes.categoryImage,
@@ -72,10 +80,11 @@ export default class TutorialCategoryListComponent {
         authorRole: tutorial.attributes.authorRole,
         slug: tutorial.attributes.slug,
         description: tutorial.attributes.description,
-        numberOfTutorials: 0
+        numberOfTutorials: categories[category].numberOfTutorials
       };
+    } else {
+      categories[category].numberOfTutorials += 1;
     }
-    categories[category].numberOfTutorials += 1;
     return categories;
-  }, {} as Record<string, ITutorialCategory>);;
+  }, {} as Record<string, ITutorialCategory>);
 }
