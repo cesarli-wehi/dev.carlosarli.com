@@ -1,12 +1,13 @@
 ---
 title: "Basic Auth"
 date: "2024-03-6"
-category: "Guides"
+category: "Express"
 mainImage: "/images/tutorials.webp"
 authorImage: "https://res.cloudinary.com/wehi-web-design-ltd/image/upload/v1698242293/carlosarli.com/photo/image0.jpg"
 authorName: "Carlo Sarli"
 authorRole: "Teaching Fellow - Technocamps"
 description: "Let's register a user"
+order: 6
 ---
 
 # Creating the user

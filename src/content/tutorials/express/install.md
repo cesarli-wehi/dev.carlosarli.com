@@ -1,12 +1,14 @@
 ---
 title: "Install"
 date: "2024-03-1"
-category: "Guides"
+category: "Express"
 mainImage: "/images/tutorials.webp"
+categoryImage: "/images/tutorials.webp"
 authorImage: "https://res.cloudinary.com/wehi-web-design-ltd/image/upload/v1698242293/carlosarli.com/photo/image0.jpg"
 authorName: "Carlo Sarli"
 authorRole: "Teaching Fellow - Technocamps"
 description: "A guide on how to install all the required software to run this project"
+order: 1
 ---
 
 # Installing the required software

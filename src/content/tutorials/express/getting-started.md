@@ -1,12 +1,13 @@
 ---
 title: "Getting Started"
 date: "2024-03-3"
-category: "Guides"
+category: "Express"
 mainImage: "/images/tutorials.webp"
 authorImage: "https://res.cloudinary.com/wehi-web-design-ltd/image/upload/v1698242293/carlosarli.com/photo/image0.jpg"
 authorName: "Carlo Sarli"
 authorRole: "Teaching Fellow - Technocamps"
 description: "Let's get this party started"
+order: 3
 ---
 
 # Let's get up and running

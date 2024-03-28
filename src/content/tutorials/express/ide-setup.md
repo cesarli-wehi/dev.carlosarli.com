@@ -1,12 +1,13 @@
 ---
 title: "IDE Setup"
 date: "2024-03-2"
-category: "Guides"
+category: "Express"
 mainImage: "/images/tutorials.webp"
 authorImage: "https://res.cloudinary.com/wehi-web-design-ltd/image/upload/v1698242293/carlosarli.com/photo/image0.jpg"
 authorName: "Carlo Sarli"
 authorRole: "Teaching Fellow - Technocamps"
 description: "Let's set up the ide to make your life easier"
+order: 2
 ---
 
 # Setting up VS Code for development 

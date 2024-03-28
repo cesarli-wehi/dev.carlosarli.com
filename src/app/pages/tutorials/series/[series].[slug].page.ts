@@ -1,6 +1,7 @@
 import { injectContent, MarkdownComponent } from '@analogjs/content';
 import { AsyncPipe, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 export interface PostAttributes {
   title: string;
@@ -24,8 +25,12 @@ export interface PostAttributes {
   styles: ``
 })
 export default class DocsPostComponent {
+  private readonly route = inject(ActivatedRoute);
+
+  readonly seriesName = this.route.snapshot.paramMap.get('series');
+  
   readonly post$ = injectContent<PostAttributes>({
     param: 'slug',
-    subdirectory: 'tutorials'
+    subdirectory: `tutorials/${this.seriesName}`
   });
 }
