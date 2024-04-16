@@ -1,12 +1,12 @@
 ---
-title: "Basic Auth"
+title: "Validation & Sanitisation"
 date: "2024-04-16"
 category: "Express"
 mainImage: "/images/tutorials.webp"
 authorImage: "https://res.cloudinary.com/wehi-web-design-ltd/image/upload/v1698242293/carlosarli.com/photo/image0.jpg"
 authorName: "Carlo Sarli"
 authorRole: "Teaching Fellow - Technocamps"
-description: "Let's register a user"
+description: "Let's validate and sanitise the user inupts"
 order: 7
 ---
 
