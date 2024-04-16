@@ -21,8 +21,10 @@ export default defineConfig(({ mode }) => ({
         routes: [
           '/',
           '/tutorials',
-          '/tutorials/python/intro-to-numpy'
         ],
+        sitemap: {
+          host: 'https://dev.carlosarli.com/',
+        },
       },
       nitro: {
         preset: 'netlify'
