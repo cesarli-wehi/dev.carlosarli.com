@@ -1,7 +1,8 @@
 /// <reference types="vitest" />
 
 import { defineConfig } from 'vite';
-import analog, { PrerenderContentFile } from '@analogjs/platform';
+import analog from '@analogjs/platform';
+import {extractRoutesToPrerender} from './vite-prerender.utils';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -14,37 +15,13 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [analog(
     {
+      static: true,
       prerender: {
-        routes: async () => [
+        discover: true,
+        routes: [
           '/',
-          '/about',
-          '/contact',
-          '/blog',
-          {
-            contentDir: 'src/content/blog',
-            transform: (file: PrerenderContentFile) => {
-              // do not include files marked as draft in frontmatter
-              if (file.attributes['draft']) {
-                return false;
-              }
-              // use the slug from frontmatter if defined, otherwise use the files basename
-              const slug = file.attributes['slug'] || file.name;
-              return `/blog/${slug}`;
-            },
-          },
           '/tutorials',
-          {
-            contentDir: 'src/content/tutorials',
-            transform: (file: PrerenderContentFile) => {
-              // do not include files marked as draft in frontmatter
-              if (file.attributes['draft']) {
-                return false;
-              }
-              // use the slug from frontmatter if defined, otherwise use the files basename
-              const slug = file.attributes['slug'] || file.name;
-              return `/tutorials/${slug}`;
-            },
-          },
+          '/tutorials/python/intro-to-numpy'
         ],
       },
       nitro: {

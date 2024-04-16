@@ -90,7 +90,7 @@ order: 6
    //at the top let's import our queries
    const { createUser } = require('../queries/users');
    //then we create our route
-   app.post('/register', createUser);
+   router.post('/register', createUser);
    ```
 4. If we go back to pg admin we should be able to see our newly crated user
 
